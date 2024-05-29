@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Navigate } from "react-router-dom";
 import { Circles } from 'react-loader-spinner';
+import PropTypes from 'prop-types';
 
 const PrivetRoute = ({ children }) => {
 
@@ -28,3 +29,7 @@ const PrivetRoute = ({ children }) => {
 };
 
 export default PrivetRoute;
+
+PrivetRoute.propTypes = {
+    children: PropTypes.node
+}
